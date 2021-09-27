@@ -773,18 +773,6 @@ namespace Microsoft.Maui.Controls.Compatibility
 				return null;
 			}
 
-			public async Task<Stream> GetStreamAsync(Uri uri, CancellationToken cancellationToken)
-			{
-				using (var client = new HttpClient())
-				{
-					// Do not remove this await otherwise the client will dispose before
-					// the stream even starts
-					var result = await StreamWrapper.GetStreamAsync(uri, cancellationToken, client).ConfigureAwait(false);
-
-					return result;
-				}
-			}
-
 			public bool IsInvokeRequired
 			{
 				get

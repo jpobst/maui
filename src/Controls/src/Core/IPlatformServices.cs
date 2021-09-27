@@ -23,8 +23,6 @@ namespace Microsoft.Maui.Controls.Internals
 
 		OSAppTheme RequestedTheme { get; }
 
-		Task<Stream> GetStreamAsync(Uri uri, CancellationToken cancellationToken);
-
 		void StartTimer(TimeSpan interval, Func<bool> callback);
 
 		string RuntimePlatform { get; }
