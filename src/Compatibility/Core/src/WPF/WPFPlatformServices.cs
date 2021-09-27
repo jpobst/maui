@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Net;
 using System.Reflection;
@@ -109,11 +108,6 @@ namespace Microsoft.Maui.Controls.Compatibility.Platform.WPF
 			}
 
 			return tcs.Task;
-		}
-
-		public IIsolatedStorageFile GetUserStoreForApplication()
-		{
-			return new WPFIsolatedStorageFile(IsolatedStorageFile.GetUserStoreForAssembly());
 		}
 
 		public void StartTimer(TimeSpan interval, Func<bool> callback)

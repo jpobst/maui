@@ -140,11 +140,6 @@ namespace Microsoft.Maui.Controls.Compatibility.Platform.Tizen
 			return AppDomain.CurrentDomain.GetAssemblies();
 		}
 
-		public IIsolatedStorageFile GetUserStoreForApplication()
-		{
-			return new TizenIsolatedStorageFile();
-		}
-
 		public void QuitApplication()
 		{
 			Forms.Context.Exit();

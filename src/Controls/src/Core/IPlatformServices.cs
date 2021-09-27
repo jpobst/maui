@@ -25,8 +25,6 @@ namespace Microsoft.Maui.Controls.Internals
 
 		Task<Stream> GetStreamAsync(Uri uri, CancellationToken cancellationToken);
 
-		IIsolatedStorageFile GetUserStoreForApplication();
-
 		void StartTimer(TimeSpan interval, Func<bool> callback);
 
 		string RuntimePlatform { get; }

@@ -77,11 +77,6 @@ namespace Microsoft.Maui.Controls.Compatibility.Platform.GTK
 			}
 		}
 
-		public IIsolatedStorageFile GetUserStoreForApplication()
-		{
-			return new GtkIsolatedStorageFile();
-		}
-
 		public void StartTimer(TimeSpan interval, Func<bool> callback)
 		{
 			GLib.Timeout.Add((uint)interval.TotalMilliseconds, () =>
